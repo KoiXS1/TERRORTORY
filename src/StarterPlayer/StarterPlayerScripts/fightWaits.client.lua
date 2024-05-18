@@ -1,0 +1,49 @@
+local Events = game:GetService("ReplicatedStorage").Events
+local currentMap = game.Workspace.currentMap
+
+Events.temporaryDisableInteraction.OnClientEvent:Connect(function(timeWait)
+	
+	--Disables click detectors.
+	for i,v in pairs (currentMap.octaNodes:GetChildren()) do
+		
+		if #v.PrimaryPart.Troops:GetChildren() >= 1 then
+			for k, w in pairs (v.PrimaryPart.Troops:GetChildren()) do
+				w:WaitForChild("ClickDetector").MaxActivationDistance = 0
+			end
+		end
+	end
+	for i,v in pairs (currentMap.rectNodes:GetChildren()) do
+
+		if #v.PrimaryPart.Troops:GetChildren() >= 1 then
+			for k, w in pairs (v.PrimaryPart.Troops:GetChildren()) do
+				w:WaitForChild("ClickDetector").MaxActivationDistance = 0
+			end
+		end
+	end
+	
+	game:GetService("Players").LocalPlayer.PlayerGui.ChoiceGUI.Enabled = false
+	
+	wait(timeWait)
+	
+	game:GetService("Players").LocalPlayer.PlayerGui.ChoiceGUI.Enabled = true
+	
+	--Reenables click detectors.
+	for i,v in pairs (currentMap.octaNodes:GetChildren()) do
+
+		if #v.PrimaryPart.Troops:GetChildren() >= 1 then
+			for k, w in pairs (v.PrimaryPart.Troops:GetChildren()) do
+				w:WaitForChild("ClickDetector").MaxActivationDistance = 500
+			end
+		end
+	end
+
+	for i,v in pairs (currentMap.rectNodes:GetChildren()) do
+
+		if #v.PrimaryPart.Troops:GetChildren() >= 1 then
+			for k, w in pairs (v.PrimaryPart.Troops:GetChildren()) do
+				w:WaitForChild("ClickDetector").MaxActivationDistance = 500
+			end
+		end
+	end
+	
+end)
