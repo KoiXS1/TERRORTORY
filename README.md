@@ -5,5 +5,7 @@ A 2-player turn-based war strategy game in ROBLOX. Fight for territory and destr
 
 Game: https://www.roblox.com/games/17497088320/TERRORTORY-v1-2 
 
+Current version: 1.2 (FOREST UPDATE - 1.2)
+
 Imported via the Rojo Plugin - [Rojo](https://github.com/rojo-rbx/rojo) 7.4.1.
 
