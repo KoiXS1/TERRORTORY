@@ -1,7 +1,8 @@
 # TERRORTORY
 A 2-player turn-based war strategy game in ROBLOX. Fight for territory and destroy the other's base.
 
-NOTE: Current repository is not the same as the current production code!
+NOTE: Current repository is not the same as the current production code! 
+(Mainly due to new code being written in RBLX Studio that was not imported to Rojo - due to problems)
 
 ![TERRORTORY(1)](https://github.com/KoiXS1/TERRORTORY/assets/166782933/7ee17c59-15fd-4720-8482-cd330cda278d)
 
